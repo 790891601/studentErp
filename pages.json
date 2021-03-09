@@ -1,0 +1,127 @@
+{
+	"leftWindow": {
+		"path": "windows/left-window.vue",
+		"style": {
+			"width": "350px"
+		}
+	},
+	"topWindow": {
+		"path": "windows/top-window.vue",
+		"style": {
+			"height": "60px"
+		}
+	},
+	"pages": [
+		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabBar/home/home",
+			"style": {
+				"navigationBarTitleText": "广东工业大学教务系统"
+			}
+		}
+	    ,{
+            "path" : "pages/tabBar/menu/menu",
+            "style" :
+            {
+                "navigationBarTitleText": "菜单列表",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/tabBar/user/user",
+            "style" :
+            {
+                "navigationBarTitleText": "个人中心",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/addCard/addCard",
+            "style" :
+            {
+                "navigationBarTitleText": "选择常用选项",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/setting/setting",
+            "style" :
+            {
+                "navigationBarTitleText": "通用设置",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" :
+            {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/repassword/repassword",
+            "style" :
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/studentStatus/studentStatus",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "学籍卡片",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"pageOrientation": "portrait",
+		"navigationBarTitleText": "Hello uniapp",
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor": "#007AFF",
+		"backgroundColor": "#F8F8F8",
+		"backgroundColorTop": "#F4F5F6",
+		"backgroundColorBottom": "#F4F5F6",
+		"mp-360": {
+			"navigationStyle": "custom"
+		},
+		"h5": {
+			"maxWidth": 1190,
+			"navigationBarTextStyle": "black",
+			"navigationBarBackgroundColor": "#F1F1F1"
+		}
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"pagePath": "pages/tabBar/home/home",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/tabBar/menu/menu",
+				"iconPath": "static/tabbar/menu.png",
+				"selectedIconPath": "static/tabbar/menu-active.png",
+				"text": "菜单"
+			}, {
+				"pagePath": "pages/tabBar/user/user",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}
