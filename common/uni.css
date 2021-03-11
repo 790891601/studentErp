@@ -17,6 +17,9 @@
 /* 展示表格的数据显示 */
 .p {
 	margin-bottom: 26upx;
+	display: flex;
+	align-items: center;
+	font-size: 32upx;
 }
 /*通用 */
 image {

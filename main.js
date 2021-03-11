@@ -5,12 +5,17 @@ import Mixins from '@/common/mixins/index';
 import myInfoMuation from '@/components/my-infomuation.vue'
 import myTab from '@/components/my-tab/my-tab.vue'
 import myTabPane from '@/components/my-tab/my-tab-pane.vue'
+import myPicker from '@/components/my-picker.vue'
+import myInput from '@/components/my-input.vue'
 
 Vue.config.productionTip = false
 
 Vue.component('my-tab', myTab)
 Vue.component('my-tab-pane', myTabPane)
 Vue.component('my-infomuation', myInfoMuation)
+Vue.component('my-picker', myPicker);
+Vue.component('my-input', myInput);
+
 Vue.prototype.$store = store
 Vue.prototype.$backgroundAudioData = {
 	playing: false,

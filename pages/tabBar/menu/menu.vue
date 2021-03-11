@@ -31,67 +31,67 @@
 					},{
 						icon: 'fa-calendar-check-o',
 						title: '学习计划',
-						url: '',
+						url: 'menu/studyPlan/studyPlan',
 						checked: false
 					},{
 						icon: 'fa-book',
 						title: '上课任务',
-						url: '',
+						url: 'menu/classTasks/classTasks',
 						checked: false
 					},{
 						icon: 'fa-calendar-o',
 						title: '课表查询',
-						url: '',
+						url: 'menu/classTimetable/classTimetable',
 						checked: false
 					},{
 						icon: 'fa-calendar-o',
 						title: '班级课表',
-						url: '',
+						url: 'menu/classTimetableAll/classTimetableAll',
 						checked: false
 					},{
 						icon: 'fa-mortar-board',
-						title: '考试成绩',
-						url: '',
+						title: '考级成绩',
+						url: 'menu/levelExaminationScore/levelExaminationScore',
 						checked: false
 					},{
 						icon: 'fa-mortar-board',
 						title: '课程成绩',
-						url: '',
+						url: 'menu/classScore/classScore',
 						checked: false
 					},{
 						icon: 'fa-bell',
 						title: '学籍预警',
-						url: '',
+						url: 'menu/earlyWarningOfStudentStatus/earlyWarningOfStudentStatus',
 						checked: false
 					},{
 						icon: 'fa-mortar-board',
 						title: '体测成绩',
-						url: '',
+						url: 'menu/staminaTestScore/staminaTestScore',
 						checked: false
 					},{
 						icon: 'fa-calendar',
 						title: '培养方案查询',
-						url: '',
+						url: 'menu/trainingProgram/trainingProgram',
 						checked: false
 					},{
 						icon: 'fa-calendar-o',
 						title: '考试安排',
-						url: '',
+						url: 'menu/examinationArrangement/examinationArrangement',
 						checked: false
 					},{
 						icon: 'fa-refresh',
 						title: '操作日志',
-						url: '',
+						url: 'menu/operationLog/operationLog',
 						checked: false
 					},{
 						icon: 'fa-mortar-board',
 						title: '测验成绩',
-						url: '',
+						url: 'menu/testScore/testScore',
 						checked: false
 					},{
 						icon: 'fa-sign-in',
 						title: '缴费记录',
-						url: '',
+						url: 'menu/paymentRecord/paymentRecord',
 						checked: false
 					}]
 				}, {

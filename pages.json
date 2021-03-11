@@ -68,16 +68,250 @@
             "path" : "pages/repassword/repassword",
             "style" :
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "忘记密码",
                 "enablePullDownRefresh": false
             }
 
         }
         ,{
             "path" : "pages/menu/studentStatus/studentStatus",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "学籍卡片",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/studyPlan/studyPlan",
+            "style" :
+            {
+                "navigationBarTitleText": "学习计划",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/studyPlan/preExamination/preExamination",
+            "style" :
+            {
+                "navigationBarTitleText": "预审学习计划",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/studyPlan/detail/detail",
+            "style" :
+            {
+                "navigationBarTitleText": "查看学习计划",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTasks/classTasks",
+            "style" :
+            {
+                "navigationBarTitleText": "上课任务",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTasks/detail/detail",
+            "style" :
+            {
+                "navigationBarTitleText": "查询上课任务",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTimetable/classTimetable",
+            "style" :
+            {
+                "navigationBarTitleText": "课表查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTimetable/myClassTimetable/myClassTimetable",
+            "style" :
+            {
+                "navigationBarTitleText": "课表查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTimetable/schoolClassTimetable/schoolClassTimetable",
+            "style" :
+            {
+                "navigationBarTitleText": "课表查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTimetableAll/classTimetableAll",
+            "style" :
+            {
+                "navigationBarTitleText": "班级课表",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classTimetableAll/classTimetableAllDetail/classTimetableAllDetail",
+            "style" :
+            {
+                "navigationBarTitleText": "班级课表",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/levelExaminationScore/levelExaminationScore",
+            "style" :
+            {
+                "navigationBarTitleText": "考级成绩",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classScore/classScore",
+            "style" :
+            {
+                "navigationBarTitleText": "课程成绩",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classScore/classScore/classScore",
+            "style" :
+            {
+                "navigationBarTitleText": "课程成绩查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/classScore/classPlusScore/classPlusScore",
+            "style" :
+            {
+                "navigationBarTitleText": "成绩加分申请查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/earlyWarningOfStudentStatus/earlyWarningOfStudentStatus",
+            "style" :
+            {
+                "navigationBarTitleText": "学籍预警",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/staminaTestScore/staminaTestScore",
+            "style" :
+            {
+                "navigationBarTitleText": "体测成绩",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/trainingProgram/trainingProgram",
+            "style" :
+            {
+                "navigationBarTitleText": "培养计划查询",
+                "enablePullDownRefresh": false
+            }
+
+        },
+		{
+		    "path" : "pages/menu/trainingProgram/detail/detail",
+		    "style" :
+		    {
+		        "navigationBarTitleText": "培养计划查询",
+		        "enablePullDownRefresh": false
+		    }
+
+		}
+        ,{
+            "path" : "pages/menu/examinationArrangement/examinationArrangement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "考试安排",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/examinationArrangement/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "考试安排",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/operationLog/operationLog",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "操作日志",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/operationLog/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "操作日志",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/testScore/testScore",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "测验成绩",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/testScore/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "测验成绩查询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/paymentRecord/paymentRecord",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "缴费记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/business/applicationForPostponement/applicationForPostponement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
             
