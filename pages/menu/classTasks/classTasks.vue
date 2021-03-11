@@ -55,6 +55,8 @@
 .input-wrap {
 	font-size: 32upx;
 	overflow: hidden;
+	align-items: center;
+	display: flex;
 	text {
 		float: left;
 	}

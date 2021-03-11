@@ -99,62 +99,62 @@
 					children: [{
 						icon: 'fa-vcard',
 						title: '缓考申请',
-						url: '',
+						url: 'menu/business/applicationForPostponement/applicationForPostponement',
 						checked: false
 					},{
 						icon: 'fa-bookmark',
 						title: '免听申请',
-						url: '',
+						url: 'menu/business/noListening/noListening',
 						checked: false
 					},{
 						icon: 'fa-bookmark-o',
 						title: '免修申请',
-						url: '',
+						url: 'menu/business/exemptionCourse/exemptionCourse',
 						checked: false
 					},{
 						icon: 'fa-file',
 						title: '休退学申请',
-						url: '',
+						url: 'menu/business/leavingSchool/leavingSchool',
 						checked: false
 					},{
 						icon: 'fa-file-text-o',
 						title: '选订教材',
-						url: '',
+						url: 'menu/business/selectedTextbooks/selectedTextbooks',
 						checked: false
 					},{
 						icon: 'fa-bank',
 						title: '教室借用申请',
-						url: '',
+						url: 'menu/business/classroomBorrowing/classroomBorrowing',
 						checked: false
 					},{
 						icon: 'fa-refresh',
 						title: '成绩复核申请',
-						url: '',
+						url: 'menu/business/score/score',
 						checked: false
 					},{
 						icon: 'fa-male',
 						title: '体测缓测申请',
-						url: '',
+						url: 'menu/business/staminaTestDelay/staminaTestDelay',
 						checked: false
 					},{
 						icon: 'fa-hand-stop-o',
 						title: '体测免测申请',
-						url: '',
+						url: 'menu/business/staminaTestFree/staminaTestFree',
 						checked: false
 					},{
 						icon: 'fa-refresh',
 						title: '成绩转换申请',
-						url: '',
+						url: 'menu/business/scoreConversion/scoreConversion',
 						checked: false
 					},{
 						icon: 'fa-address-card',
 						title: '学生证补办申请',
-						url: '',
+						url: 'menu/business/studentCardReplace/studentCardReplace',
 						checked: false
 					},{
 						icon: 'fa-info-circle',
 						title: '请假申请',
-						url: '',
+						url: 'menu/business/leave/leave',
 						checked: false
 					}]
 				}, {
@@ -162,7 +162,7 @@
 					children: [{
 						icon: 'fa-calendar-plus-o',
 						title: '信息变动申请',
-						url: '',
+						url: 'menu/changeStatus/infoChange/infoChange',
 						checked: false
 					},{
 						icon: 'fa-address-book',

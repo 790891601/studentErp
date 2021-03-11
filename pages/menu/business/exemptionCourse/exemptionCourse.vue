@@ -1,24 +1,32 @@
 <template>
 	<view>
-		<!-- 缓考申请 -->
+		<!-- 免修申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
-				<!-- 缓考申请 -->
+				<!-- 免修申请 -->
 				<my-infomuation>
 					<view class="p">
 						<text>学年学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>认定教师：</text>
-						<my-input class="selector"></my-input>
+						<text>免修类型：</text>
+						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程名称：</text>
-						<my-input class="selector"></my-input>
+						<text>计划类型：</text>
+						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>申请原因：</text>
+						<text>免修课程：</text>
+						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
+					</view>
+					<view class="p">
+						<text>替代课程：</text>
+						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
+					</view>
+					<view class="p">
+						<text>申请说明：</text>
 						<my-textarea class="selector"></my-textarea>
 					</view>
 					<view class="p">
@@ -33,15 +41,17 @@
 			<!-- 申请记录 -->
 			<my-tab-pane :active="active" :index="1">
 				<my-infomuation>
-					<view class="p">开课学期：</view>
+					<view class="p">免修类型：</view>
 					<view class="p">学号：</view>
 					<view class="p">姓名：</view>
-					<view class="p">课程名称：</view>
+					<view class="p">任务代码：</view>
+					<view class="p">申请学期：</view>
+					<view class="p">免修课程：</view>
+					<view class="p">替代课程：</view>
 					<view class="p">总学时：</view>
-					<view class="p">开课院系：</view>
-					<view class="p">认定教师：</view>
+					<view class="p">学分：</view>
+					<view class="p">修读方式：</view>
 					<view class="p">申请时间：</view>
-					<view class="p">申请原因：</view>
 					<view class="p">审核状态：</view>
 					<view class="p">审核结果：</view>
 				</my-infomuation>
@@ -55,7 +65,7 @@
 		data() {
 			return {
 				head: [{
-					title: '缓考申请'
+					title: '免修申请'
 				},{
 					title: '申请记录'
 				}],
@@ -64,7 +74,7 @@
 		},
 		methods: {
 			onAddSubmit() {
-				//增加缓考申请
+				//免修申请
 
 			}
 		}

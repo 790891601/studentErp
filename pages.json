@@ -246,69 +246,186 @@
 		}
         ,{
             "path" : "pages/menu/examinationArrangement/examinationArrangement",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "考试安排",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/examinationArrangement/detail/detail",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "考试安排",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/operationLog/operationLog",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "操作日志",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/operationLog/detail/detail",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "操作日志",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/testScore/testScore",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "测验成绩",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/testScore/detail/detail",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "测验成绩查询",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/paymentRecord/paymentRecord",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "缴费记录",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/applicationForPostponement/applicationForPostponement",
+            "style" :
+            {
+                "navigationBarTitleText": "缓考申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/noListening/noListening",
+            "style" :
+            {
+                "navigationBarTitleText": "免听申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/exemptionCourse/exemptionCourse",
+            "style" :
+            {
+                "navigationBarTitleText": "免修申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/leavingSchool/leavingSchool",
+            "style" :
+            {
+                "navigationBarTitleText": "休退学申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/selectedTextbooks/selectedTextbooks",
+            "style" :
+            {
+                "navigationBarTitleText": "选订教材",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/classroomBorrowing/classroomBorrowing",
+            "style" :
+            {
+                "navigationBarTitleText": "教室借用申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/classroomBorrowing/detail/detail",
+            "style" :
+            {
+                "navigationBarTitleText": "教室借用查询",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/score/score",
+            "style" :
+            {
+                "navigationBarTitleText": "成绩复核申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/staminaTestDelay/staminaTestDelay",
+            "style" :
+            {
+                "navigationBarTitleText": "体测缓测申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/scoreConversion/scoreConversion",
+            "style" :
+            {
+                "navigationBarTitleText": "成绩转换申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/staminaTestFree/staminaTestFree",
+            "style" :
+            {
+                "navigationBarTitleText": "体测免测申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/business/studentCardReplace/studentCardReplace",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "学生证补办申请",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/menu/business/applicationForPostponement/applicationForPostponement",
+            "path" : "pages/menu/business/leave/leave",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/changeStatus/infoChange/infoChange",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

@@ -1,24 +1,20 @@
 <template>
 	<view>
-		<!-- 缓考申请 -->
+		<!-- 免听申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
-				<!-- 缓考申请 -->
+				<!-- 免听申请 -->
 				<my-infomuation>
 					<view class="p">
 						<text>学年学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>认定教师：</text>
-						<my-input class="selector"></my-input>
-					</view>
-					<view class="p">
 						<text>课程名称：</text>
 						<my-input class="selector"></my-input>
 					</view>
 					<view class="p">
-						<text>申请原因：</text>
+						<text>免听原因：</text>
 						<my-textarea class="selector"></my-textarea>
 					</view>
 					<view class="p">
@@ -36,10 +32,9 @@
 					<view class="p">开课学期：</view>
 					<view class="p">学号：</view>
 					<view class="p">姓名：</view>
-					<view class="p">课程名称：</view>
+					<view class="p">免听课程：</view>
 					<view class="p">总学时：</view>
-					<view class="p">开课院系：</view>
-					<view class="p">认定教师：</view>
+					<view class="p">教学班：</view>
 					<view class="p">申请时间：</view>
 					<view class="p">申请原因：</view>
 					<view class="p">审核状态：</view>
@@ -55,7 +50,7 @@
 		data() {
 			return {
 				head: [{
-					title: '缓考申请'
+					title: '免听申请'
 				},{
 					title: '申请记录'
 				}],
@@ -64,7 +59,7 @@
 		},
 		methods: {
 			onAddSubmit() {
-				//增加缓考申请
+				//免听申请
 
 			}
 		}

@@ -1,3 +1,52 @@
+function customShowModal(opts) {
+	if (typeof opts === 'undefined') opts = {};
+	return new Promise(function(resolve, reject) {
+		uni.showModal({
+			title: opts.title || '系统提示',
+			content: opts.content || '确定进行该操作？',
+			showCancel: opts.showCancel === true,
+			cancelText: opts.cancelText || '取消',
+			cancelColor: opts.cancelColor || '#909399',
+			confirmText: opts.confirmText || '确定',
+			confirmColor: opts.confirmColor || '#13557C',
+			success: function(res) {
+				if (res.confirm) {
+					resolve(true);
+				} else {
+					reject(new Error('用户取消操作'));
+				}
+			},
+			fail: function() {
+				reject(new Error('Modal调用失败'));
+			}
+		});
+	});
+};
+
+function customShowToast(opts) {
+	if (typeof opts === 'undefined') opts = {};
+	let data = {
+		title: opts.title || 'Toast',
+		icon: opts.icon || 'none',
+		mask: typeof opts.marsker === 'boolean' ? opts.marsker : true,
+		duration: opts.duration > 0 ? opts.duration : 1500
+	};
+	if (opts.image) data.image = opts.image;
+	if (opts.success) data.success = opts.success;
+	if (opts.fail) data.fail = opts.fail;
+	uni.showToast(data);
+};
+
+function getStorageSync(key, defaultValue) {
+	return uni.getStorageSync(key) ? JSON.parse(uni.getStorageSync(key)) : defaultValue != null ? defaultValue : {};
+}
+function setStorageSync(key, value) {
+	uni.setStorageSync(key, JSON.stringify(value));
+}
+function clearStorageSync(key) {
+	uni.removeStorageSync(key)
+}
+
 function formatTime(time) {
 	if (typeof time !== 'number' || time < 0) {
 		return time
@@ -69,5 +118,10 @@ var dateUtils = {
 module.exports = {
 	formatTime: formatTime,
 	formatLocation: formatLocation,
-	dateUtils: dateUtils
+	dateUtils: dateUtils,
+	customShowModal: customShowModal,
+	customShowToast: customShowToast,
+	getStorageSync: getStorageSync,
+	setStorageSync: setStorageSync,
+	clearStorageSync: clearStorageSync
 }

@@ -49,6 +49,9 @@
 	padding: 8upx;
 	border-radius: 10upx;
 }
+.value {
+	font-size: 32upx;
+}
 .selector {
 	min-width: 150upx;
 }

@@ -1,13 +1,13 @@
 <template>
 	<view class="input-block">
-		<input class="input" type="text" :placeholder="placeholder" :value="value" @input="onInput" />
+		<textarea class="input" :placeholder="placeholder" @input="onInput" confirm-type="done">{{value}}</textarea>
 		<uni-icons class="clear-icon" type="clear" v-show="value.length" @tap="onClear"></uni-icons>
 	</view>
 </template>
 
 <script>
 	export default {
-		name:"my-input",
+		name:"my-textarea",
 		inheritAttrs: false,
 		model: {
 			prop: 'value',
@@ -48,8 +48,8 @@
 	border-radius: 10upx;
 	position: relative;
 	.input {
-		flex: 1 auto;
 		font-size: 32upx;
+		flex: 1 auto;
 	}
 	.clear-icon {
 		position: absolute;
