@@ -1,6 +1,6 @@
 <template>
 	<view class="input-block">
-		<textarea class="input" :placeholder="placeholder" @input="onInput" confirm-type="done">{{value}}</textarea>
+		<textarea class="input" :placeholder="placeholder" @input="onInput" confirm-type="done" :value="value"></textarea>
 		<uni-icons class="clear-icon" type="clear" v-show="value.length" @tap="onClear"></uni-icons>
 	</view>
 </template>

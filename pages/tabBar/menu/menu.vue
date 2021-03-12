@@ -167,7 +167,7 @@
 					},{
 						icon: 'fa-address-book',
 						title: '学籍变动申请',
-						url: '',
+						url: 'menu/changeStatus/studentStatusChange/studentStatusChange',
 						checked: false
 					}]
 				}, {
@@ -175,27 +175,27 @@
 					children: [{
 						icon: 'fa-cloud',
 						title: '创新学分申请',
-						url: '',
+						url: 'menu/innovation/innovationScore/innovationScore',
 						checked: false
 					},{
 						icon: 'fa-hand-stop-o',
 						title: '课外课题申请',
-						url: '',
+						url: 'menu/innovation/extracurricularProjects/extracurricularProjects',
 						checked: false
 					},{
 						icon: 'fa-rmb',
 						title: '个人报销申请',
-						url: '',
+						url: 'menu/innovation/reimbursement/reimbursement',
 						checked: false
 					},{
 						icon: 'fa-newspaper-o',
 						title: '课题成果申报',
-						url: '',
+						url: 'menu/innovation/researchAchievements/researchAchievements',
 						checked: false
 					},{
 						icon: 'fa-newspaper-o',
 						title: '课题结题申报',
-						url: '',
+						url: 'menu/innovation/conclusionProject/conclusionProject',
 						checked: false
 					}]
 				}, {

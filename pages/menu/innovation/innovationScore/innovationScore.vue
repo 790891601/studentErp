@@ -1,68 +1,65 @@
 <template>
 	<view>
-		<!-- 信息变动申请 -->
+		<!-- 创新学分申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
 				<!-- 增加申请 -->
 				<my-infomuation>
-					<view class="pic">
-						<image class="pic-image" src="/static/defaultPic.png"></image>
-					</view>
 					<view class="p">
-						<text>姓名：</text>
-					</view>
-					<view class="p">
-						<text>姓名拼音：</text>
-					</view>
-					<view class="p">
-						<text>英文姓名：</text>
-					</view>
-					<view class="p">
-						<text>出生日期：</text>
-					</view>
-					<view class="p">
-						<text>籍贯：</text>
-					</view>
-					<view class="p">
-						<text>身份证号：</text>
-					</view>
-					<view class="p">
-						<text>银行账号：</text>
-					</view>
-
-					<view class="p">
-						<text>政治面貌：</text>
+						<text>项目类型：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>民族：</text>
+						<text>奖励级别：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 
 					<view class="p">
-						<text>专业方向：</text>
+						<text>奖励等级：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
+
+					<view class="p">
+						<text>申请学分：</text>
+						<my-input class="selector"></my-input>
+					</view>
+
+					<view class="p">
+						<text>学期学年：</text>
+						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
+					</view>
+
+					<view class="p">
+						<text>备注：</text>
+						<my-textarea class="selector" v-model="form.comment"></my-textarea>
+					</view>
+
 					<view class="p p2">
-						<text>附件：</text>
+						<text>申请材料：</text>
 						<my-upload :tipsHidden="true" :limitType="limitType"></my-upload>
 					</view>
-					<view>(上传格式为jpg,gif,png,bmp,jpeg,pdf,zip,rar)</view>
+					<view>(上传格式为zip，文件名字数不多于15个)</view>
 					<view class="buttons">
-						<view class="button-view">提交</view>
+						<view class="button-view" @tap="onAddSubmit">提交</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
 			<!-- 申请记录 -->
 			<my-tab-pane :active="active" :index="1">
 				<my-infomuation>
-					<view class="p">变动信息名称：</view>
-					<view class="p">变动信息内容：</view>
-					<view class="p">原信息内容：</view>
+					<view class="p">学号：</view>
+					<view class="p">姓名：</view>
+					<view class="p">院系名称：</view>
+					<view class="p">班级名称：</view>
+					<view class="p">学年学期：</view>
+					<view class="p">项目类型：</view>
+					<view class="p">项目分类：</view>
+					<view class="p">奖励级别：</view>
+					<view class="p">奖励等级：</view>
+					<view class="p">申请学分：</view>
+					<view class="p">认定学分：</view>
+					<view class="p">总成绩：</view>
 					<view class="p">审核状态：</view>
-					<view class="p">审核结果：</view>
-					<view class="p">申请日期：</view>
-					<view class="p">附件：</view>
 				</my-infomuation>
 			</my-tab-pane>
 		</my-tab>
@@ -79,13 +76,16 @@
 					title: '申请记录'
 				}],
 				active: 0,
-				limitType: ['.jpg', '.gif', '.bmp', '.jpeg', '.pdf', '.zip', '.rar']
+				limitType: ['.zip'],
+				form: {
+					comment: '', //备注
+				}
 			}
 		},
 		methods: {
 			onAddSubmit() {
 				//增加申请
-
+				console.log(this.form);
 			}
 		}
 	}
@@ -104,13 +104,6 @@
 	align-items: flex-start;
 	margin-bottom: 26upx;
 	display: flex;
-}
-.pic-image {
-	width: 238upx;
-	height: 290upx;
-}
-.pic {
-	padding-bottom: 20upx;
 }
 .buttons {
 	margin-top: 60upx;

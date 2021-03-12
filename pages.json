@@ -408,24 +408,78 @@
         }
         ,{
             "path" : "pages/menu/business/studentCardReplace/studentCardReplace",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "学生证补办申请",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/business/leave/leave",
+            "style" :
+            {
+                "navigationBarTitleText": "请假申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/changeStatus/infoChange/infoChange",
+            "style" :
+            {
+                "navigationBarTitleText": "信息变动申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/changeStatus/studentStatusChange/studentStatusChange",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "学籍变动申请",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/menu/changeStatus/infoChange/infoChange",
+            "path" : "pages/menu/innovation/innovationScore/innovationScore",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "创新学分申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/innovation/extracurricularProjects/extracurricularProjects",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "课外课题申报",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/innovation/reimbursement/reimbursement",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人报销申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/innovation/researchAchievements/researchAchievements",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "课题成果申报",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/innovation/conclusionProject/conclusionProject",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
