@@ -44,9 +44,10 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: #fff;
-	padding: 8upx 80upx 8upx 25upx;
+	padding: 4upx 80upx 4upx 25upx;
 	border-radius: 10upx;
 	position: relative;
+	border: 1px solid #d4d4d4;
 	.input {
 		flex: 1 auto;
 		font-size: 32upx;

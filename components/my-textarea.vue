@@ -44,12 +44,15 @@
 	justify-content: space-between;
 	align-items: center;
 	background-color: #fff;
-	padding: 8upx 80upx 8upx 25upx;
+	padding: 16upx 80upx 16upx 25upx;
 	border-radius: 10upx;
 	position: relative;
+	border: 1px solid #d4d4d4;
+	height: 150upx;
 	.input {
 		font-size: 32upx;
 		flex: 1 auto;
+		height: 100%;
 	}
 	.clear-icon {
 		position: absolute;

@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 学籍变更申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
@@ -56,44 +56,44 @@
 						<text class="text">异动申请</text>
 					</view>
 					<view class="p">
-						<text>异动类别：</text>
+						<text class="field">异动类别：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>异动原因：</text>
+						<text class="field">异动原因：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>院系名称：</text>
+						<text class="field">院系名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>所在年级：</text>
+						<text class="field">所在年级：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>专业名称：</text>
+						<text class="field">专业名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>班级名称：</text>
+						<text class="field">班级名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>生效学期：</text>
+						<text class="field">生效学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>异动说明：</text>
+						<text class="field">异动说明：</text>
 						<my-textarea class="selector"></my-textarea>
 					</view>
 					<view class="p p2">
-						<text>附件：</text>
+						<text class="field">附件：</text>
 						<my-upload :tipsHidden="true" :limitType="limitType"></my-upload>
 					</view>
-					<view>(上传格式为jpg,gif,png,bmp,jpeg,pdf,zip,rar)</view>
+					<view class="tips-color">(上传格式为jpg,gif,png,bmp,jpeg,pdf,zip,rar)</view>
 					<view class="buttons">
-						<view class="button-view">提交</view>
+						<view class="button-view button-max">提交</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
@@ -138,6 +138,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 60%;
 }
@@ -152,7 +153,7 @@
 	display: flex;
 }
 .info-title {
-	padding-bottom: 16upx;;
+	padding-bottom: 40upx;;
 	font-size: 42upx;
 	text-align: center;
 	text-shadow: #3291f8 0px 2px 6px;
@@ -166,16 +167,9 @@
 	justify-content: space-between;
 	padding-bottom: 70upx;
 }
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
-	margin: auto;
+.tips-color {
+	color: #999;
+	font-size: 28upx;
 }
 .hr {
 	margin-top: 120upx;

@@ -1,5 +1,5 @@
 <template>
-	<view class="info" :style="{ backgroundColor: bgcolor }">
+	<view class="info">
 		<slot></slot>
 	</view>
 </template>
@@ -7,12 +7,6 @@
 <script>
 	export default {
 		name:"my-infomuation",
-		props: {
-			bgcolor: {
-				type: String,
-				default: 'rgb(177, 207, 241)'
-			}
-		},
 		data() {
 			return {
 
@@ -27,5 +21,6 @@
 	border-radius: 18upx;
 	margin: 30upx 24upx;
 	padding: 32upx 50upx;
+	background-color: white;
 }
 </style>

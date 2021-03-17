@@ -1,5 +1,5 @@
 <template>
-	<view class="student-card-container">
+	<view class="container">
 		<!-- 学籍卡片 -->
 		<my-tab :head="head" :active.sync="active">
 			<my-tab-pane :active="active" :index="0">

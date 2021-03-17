@@ -7,7 +7,7 @@
 				  v-for="(item,index) in head"
 				  :key="index"
 				  @tap="onClick(index)">
-				{{item.title}}
+				<text class="text">{{item.title}}</text>
 			</view>
 		</view>
 		<slot></slot>
@@ -59,14 +59,30 @@
 	flex-wrap: wrap;
 	align-items: center;
 	padding-top: 44upx;
+	background-color: white;
 }
 .tab-head-item {
 	text-align: center;
 	font-size: 36upx;
 	color: rgba(0,0,0,.62);
-	margin-bottom: 48upx;
+	padding-bottom: 48upx;
+	position: relative;
 }
 .tab-head-active {
-	text-shadow: rgb(50, 145, 248) 0px 2px 6px;
+	// text-shadow: rgb(50, 145, 248) 0px 2px 6px;
+	.text {
+		color: #01a1eb;
+		&::before {
+			content: "";
+			width: 30%;
+			position: absolute;
+			background-color: #01a1eb;
+			left: 50%;
+			bottom: 30upx;
+			height: 6upx;
+			transform: translate(-50%, 50%);
+			border-radius: 15upx;
+		}
+	}
 }
 </style>

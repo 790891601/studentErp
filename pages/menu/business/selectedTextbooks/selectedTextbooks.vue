@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 选订教材 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
@@ -27,43 +27,43 @@
 				<!-- 选订教材 -->
 				<my-infomuation>
 					<view class="p">
-						<text>学年学期：</text>
+						<text class="field">学年学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>开设学期：</text>
+						<text class="field">开设学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程编号：</text>
+						<text class="field">课程编号：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程名称：</text>
+						<text class="field">课程名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>教班名称：</text>
+						<text class="field">教班名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>总学时：</text>
+						<text class="field">总学时：</text>
 						<my-input class="selector"></my-input>
 					</view>
 					<view class="p">
-						<text>课程大类：</text>
+						<text class="field">课程大类：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程分类：</text>
+						<text class="field">课程分类：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>征订类型：</text>
+						<text class="field">征订类型：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="buttons">
-						<view class="button-view" @tap="onAddSubmit">选定教材</view>
+						<view class="button-view button-max" @tap="onAddSubmit">选定教材</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
@@ -93,6 +93,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 70%;
 }
@@ -105,15 +106,5 @@
 	display: flex;
 	justify-content: center;
 	padding-bottom: 70upx;
-}
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
 }
 </style>

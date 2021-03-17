@@ -1,68 +1,68 @@
 <template>
-	<view>
-		<!-- 免听申请 -->
+	<view class="container">
+		<!-- 成绩复核 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
-				<!-- 免听申请 -->
+				<!-- 成绩复核 -->
 				<my-infomuation>
 					<view class="p">
-						<text>学年学期：</text>
+						<text class="field">学年学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程编号：</text>
+						<text class="field">课程编号：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程名称：</text>
+						<text class="field">课程名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>总成绩：</text>
+						<text class="field">总成绩：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>绩点：</text>
+						<text class="field">绩点：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>学时：</text>
+						<text class="field">学时：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>学分：</text>
+						<text class="field">学分：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程大类：</text>
+						<text class="field">课程大类：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课程分类：</text>
+						<text class="field">课程分类：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>修读方式：</text>
+						<text class="field">修读方式：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>考试性质：</text>
+						<text class="field">考试性质：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>成绩方式：</text>
+						<text class="field">成绩方式：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>任务编号：</text>
+						<text class="field">任务编号：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>有效性：</text>
+						<text class="field">有效性：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="buttons">
-						<view class="button-view" @tap="onAddSubmit">复核</view>
+						<view class="button-view button-max" @tap="onAddSubmit">复核</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
@@ -109,6 +109,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 70%;
 }
@@ -121,15 +122,5 @@
 	display: flex;
 	justify-content: center;
 	padding-bottom: 70upx;
-}
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
 }
 </style>

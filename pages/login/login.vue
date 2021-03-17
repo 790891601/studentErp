@@ -8,19 +8,19 @@
 			<view class="input-block">
 				<view class="input-label">账号</view>
 				<view class="input-value">
-					<input class="input" type="text" placeholder="请输入学号或工号" />
+					<input class="input" v-model="username" type="text" placeholder="请输入学号或工号" />
 				</view>
 			</view>
 			<view class="input-block">
 				<view class="input-label">密码</view>
 				<view class="input-value">
-					<input class="input" type="text" password placeholder="请输入密码" />
+					<input class="input" v-model="password" type="text" password placeholder="请输入密码" />
 				</view>
 			</view>
 			<view class="input-block">
 				<view class="input-label">验证码</view>
 				<view class="input-value">
-					<input class="input" type="text" placeholder="请输入验证码" />
+					<input class="input" v-model="code" type="text" placeholder="请输入验证码" />
 				</view>
 			</view>
 			<view class="submit-button" @tap="onLogin">立即登录</view>
@@ -33,13 +33,24 @@
 	export default {
 		data() {
 			return {
-
+				username: '',
+				password: '',
+				code: ''
 			}
 		},
 		methods: {
-			onLogin() {
+			async onLogin() {
 				//立即登录
-
+				let data = {
+					username: this.username,
+					password: this.password,
+					code: this.code
+				}
+				try {
+					let rst = await this.$post('login', data);
+				}catch(err) {
+					console.log(err);
+				}
 			}
 		}
 	}

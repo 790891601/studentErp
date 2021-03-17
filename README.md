@@ -1,1 +1,69 @@
-## 
+## 项目文档
+### 项目导航 
+  - pages/menu  菜单二级页面
+		 /studentStatus 学籍卡片
+		 /studyPlan 学习计划
+		 /classTasks 上课任务
+		 /preExamination 预审学习计划
+		 /classTimetable 课表查询
+		 /classTimetableAll 班级课表
+		 /levelExaminationScore 考级成绩
+		 /classScore 课程成绩
+		 /earlyWarningOfStudentStatus 学籍预警
+		 /staminaTestScore 体测成绩
+		 /trainingProgram 培养计划
+		 /examinationArrangement 考试安排
+		 /operationLog 操作日志
+		 /testScore 测验成绩
+		 /paymentRecord 缴费记录
+		 /business 业务办理
+			/applicationForPostponement 缓考申请
+			/noListening 免听申请
+			/exemptionCourse 免修申请
+			/leavingSchool 休退学申请
+			/selectedTextbooks 选订教材
+			/classroomBorrowing 教室借用申请
+			/score 成绩复核申请
+			/staminaTestDelay 体测缓测申请
+			/scoreConversion 成绩转换申请
+			/staminaTestFree 体测免测申请
+			/studentCardReplace 学生证补办申请
+			/leave 请假申请
+		 /innovation 创新项目
+			/innovationScore 创新学分申请
+			/extracurricularProjects 课外课题申报
+			/reimbursement 个人报销申请
+			/researchAchievements 课题成果申报
+			/conclusionProject 课题结题申请
+		 /changesStatus 学籍变动
+			/infoChange 信息变动申请
+			/studentStatusChange 学籍变动申请
+		 /courseRegistration 选课报名
+		    /courseSelection 选课-任选
+			/courseSelectionRestriction 选课-限选
+			/graduationTopicSelection 毕业选题
+			/levelExamination 考级报名
+			/examination 考试报名（待开发）
+			/staminaTest 体测报名
+			/dropOut 退课申请
+		 /evaluate 评价信息
+			/teacher 教师评价
+			/course  课程评价
+			/classroom 课堂评价
+			/questionnaireInvestigation 问卷调查
+		/selection 评选信息
+			/teacher 优秀教师评选	
+	- /components 公共组件
+		/my-tab Tab标签页
+		/my-infomuation 信息展示容器
+	- common 
+	    /mixins 混入通用函数
+		/scss 公共引入样式管理
+		/data 前端静态数据
+		thirdParty.js 第三方请求封装
+		config.js 网站项目配置以及常量配置
+		request.js 请求库
+		uni.css 公共样式
+		utils.js 公共函数库
+		
+### 

@@ -1,5 +1,5 @@
 <template>
-	<view class="class-score">
+	<view class="container">
 		<!-- 操作日志 -->
 		<my-infomuation>
 			<view class="log-title">起止时间</view>
@@ -9,7 +9,7 @@
 				<my-picker class="selector" mode="date" :defaultValue.sync="form.endTime"></my-picker>
 			</view>
 			<view class="buttons">
-				<view class="button-view" @tap="onNavigateToMixin" data-url="menu/operationLog/detail/detail">查询</view>
+				<view class="button-view button-lg" @tap="onNavigateToMixin" data-url="menu/operationLog/detail/detail">查询</view>
 			</view>
 		</my-infomuation>
 	</view>
@@ -33,8 +33,8 @@
 
 <style lang="scss" scoped>
 @import "../../../common/scss/button.scss";
-.class-score {
-	margin-top: 160upx;
+.container {
+	padding-top: 30upx;
 }
 .selector {
 	width: 50%;

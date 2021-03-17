@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 教室借用申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
@@ -28,39 +28,39 @@
 				<!-- 空闲教室查询 -->
 				<my-infomuation>
 					<view class="p">
-						<text>学年学期：</text>
+						<text class="field">学年学期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>周次：</text>
+						<text class="field">周次：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>星期：</text>
+						<text class="field">星期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>日期：</text>
+						<text class="field">日期：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>校区：</text>
+						<text class="field">校区：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>功能区：</text>
+						<text class="field">功能区：</text>
 						<my-input class="selector"></my-input>
 					</view>
 					<view class="p">
-						<text>教学楼：</text>
+						<text class="field">教学楼：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>教室：</text>
+						<text class="field">教室：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="buttons">
-						<view class="button-view" @tap="onNavigateToMixin" data-url="menu/business/classroomBorrowing/detail/detail">查询</view>
+						<view class="button-view button-max" @tap="onNavigateToMixin" data-url="menu/business/classroomBorrowing/detail/detail">查询</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
@@ -86,6 +86,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 70%;
 }
@@ -98,15 +99,5 @@
 	display: flex;
 	justify-content: center;
 	padding-bottom: 70upx;
-}
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
 }
 </style>

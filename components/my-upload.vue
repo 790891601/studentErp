@@ -1,7 +1,7 @@
 <template>
 	<view class="my-upload">
 		<view class="select-button" @tap="onShowUpload">选择</view>
-		<view v-if="!tipsHidden">（上传格式为{{tips}}）</view>
+		<view v-if="!tipsHidden" class="tips-color">（上传格式为{{tips}}）</view>
 	</view>
 </template>
 
@@ -56,13 +56,19 @@
 	align-items: center;
 	justify-content: flex-start;
 }
+.tips-color {
+	color: #999999;
+	font-size: 28upx;
+}
 .select-button {
-	box-shadow: #666 0px 2px 6px 0px;
+	box-shadow: #F5F5F5 0px 2px 6px 0px;
 	border-radius: 10upx;
-	width: 180upx;
-	height: 60upx;
-	line-height: 60upx;
+	width: 230upx;
+	height: 70upx;
+	color: white;
+	line-height: 70upx;
 	text-align: center;
-	font-size: 36upx;
+	font-size: 32upx;
+	background-color: #01a1eb;
 }
 </style>

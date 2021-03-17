@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 成绩转换申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
@@ -60,6 +60,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 70%;
 }
@@ -72,16 +73,6 @@
 	display: flex;
 	justify-content: center;
 	padding-bottom: 70upx;
-}
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
 }
 .hr {
 	margin-top: 120upx;

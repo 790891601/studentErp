@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 预审 -->
 		<my-infomuation>
 			<view class="p">平均学分绩点：</view>

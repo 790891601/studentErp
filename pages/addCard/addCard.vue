@@ -1,17 +1,17 @@
 <template>
 	<view class="add-options">
 		<view class="add-head">
-			<view class="done-button">完成</view>
+			<view class="done-button" @tap="onDone">完成</view>
 		</view>
 		<!-- 添加常用选项 -->
-		<checkbox-group value="" @change="">
-			<view class="module" v-for="(item, index) in module" :key="index">
+		<checkbox-group @change="onCheckboxGroup">
+			<view class="module" v-for="(item, index) in menu" :key="index">
 				<view class="module-title">{{item.title}}</view>
 				<view class="card-list">
 					<view class="card-item" v-for="(card, index2) in item.children" :key="index2">
 						<view class="fa fa-2x card-icon" :class="[card.icon]"></view>
 						<text class="card-text">{{card.title}}</text>
-						<checkbox name="card" color="#528FFB" class="card-checkbox"></checkbox>
+						<checkbox name="card" color="#528FFB" class="card-checkbox" :value="card.name" :checked="card.checked"></checkbox>
 					</view>
 				</view>
 			</view>
@@ -20,262 +20,49 @@
 </template>
 
 <script>
+	import {mapState, mapMutations} from 'vuex';
+	import menuSourceData from '@/common/data/menuSourceData.js'
+
 	export default {
 		components: {
 		},
+		computed: {
+			...mapState(['selectedMenu'])
+		},
+		onShow() {
+			//初始化菜单
+			this.checkMenuName = this.selectedMenu;
+			
+			this.menu = menuSourceData.map(menu => {
+				menu.children = menu.children.map(item => {
+					if(this.selectedMenu.indexOf(item.name) > -1) item.checked = true;
+					return item;
+				});
+				return menu;
+			})
+		},
 		data() {
 			return {
-				module: [{
-					title: '信息查询',
-					children: [{
-						icon: 'fa-vcard',
-						title: '学籍卡片',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-calendar-check-o',
-						title: '学习计划',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-book',
-						title: '上课任务',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-calendar-o',
-						title: '课表查询',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-calendar-o',
-						title: '班级课表',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-mortar-board',
-						title: '考试成绩',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-mortar-board',
-						title: '课程成绩',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-bell',
-						title: '学籍预警',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-mortar-board',
-						title: '体测成绩',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-calendar',
-						title: '培养方案查询',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-calendar-o',
-						title: '考试安排',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-refresh',
-						title: '操作日志',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-mortar-board',
-						title: '测验成绩',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-sign-in',
-						title: '缴费记录',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '业务办理',
-					children: [{
-						icon: 'fa-vcard',
-						title: '缓考申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-bookmark',
-						title: '免听申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-bookmark-o',
-						title: '免修申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-file',
-						title: '休退学申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-file-text-o',
-						title: '选订教材',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-bank',
-						title: '教室借用申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-refresh',
-						title: '成绩复核申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-male',
-						title: '体测缓测申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-hand-stop-o',
-						title: '体测免测申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-refresh',
-						title: '成绩转换申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-address-card',
-						title: '学生证补办申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-info-circle',
-						title: '请假申请',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '学籍变动',
-					children: [{
-						icon: 'fa-calendar-plus-o',
-						title: '信息变动申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-address-book',
-						title: '学籍变动申请',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '创新项目',
-					children: [{
-						icon: 'fa-cloud',
-						title: '创新学分申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-hand-stop-o',
-						title: '课外课题申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-rmb',
-						title: '个人报销申请',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-newspaper-o',
-						title: '课题成果申报',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-newspaper-o',
-						title: '课题结题申报',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '选课报名',
-					children: [{
-						icon: 'fa-book',
-						title: '选课-任选',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-book',
-						title: '选课-限选',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-book',
-						title: '毕业选题',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-caret-square-o-up',
-						title: '考级报名',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-pencil',
-						title: '考试报名',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-male',
-						title: '体测报名',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-mail-reply',
-						title: '退课申请',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '评价信息',
-					children: [{
-						icon: 'fa-address-card',
-						title: '教师评价',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-commenting',
-						title: '课程评价',
-						url: '',
-						checked: false
-					},{
-						icon: 'fa-bank',
-						title: '课堂评价',
-						url: '',
-						checked: false
-					}, {
-						icon: 'fa-tags',
-						title: '问卷调查',
-						url: '',
-						checked: false
-					}]
-				}, {
-					title: '评选信息',
-					children: [{
-						icon: 'fa-child',
-						title: '优秀教师评选',
-						url: '',
-						checked: false
-					}]
-				}]
+				checkMenuName: [], //选中列表
+				menu: [], //菜单
+				menuSourceData: menuSourceData
 			}
 		},
 		methods: {
+			...mapMutations(['setselectedMenu']),
+			onDone() {
+				//完成
+				//存储本地的数据
+				this.$utils.setStorageSync(this.$config.varNames.MENU, this.checkMenuName);
+				this.setselectedMenu(this.checkMenuName);
 
+				uni.switchTab({
+					url: '/pages/tabBar/home/home'
+				})
+			},
+			onCheckboxGroup(e) {
+				this.checkMenuName = e.detail.value;
+			}
 		}
 	}
 </script>

@@ -32,7 +32,7 @@
             "path" : "pages/tabBar/user/user",
             "style" :
             {
-                "navigationBarTitleText": "个人中心",
+                "navigationBarTitleText": "我的",
                 "enablePullDownRefresh": false
             }
 
@@ -435,54 +435,233 @@
         }
         ,{
             "path" : "pages/menu/changeStatus/studentStatusChange/studentStatusChange",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "学籍变动申请",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/innovation/innovationScore/innovationScore",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "创新学分申请",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/innovation/extracurricularProjects/extracurricularProjects",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "课外课题申报",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/innovation/reimbursement/reimbursement",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "个人报销申请",
                 "enablePullDownRefresh": false
             }
-            
+
         }
         ,{
             "path" : "pages/menu/innovation/researchAchievements/researchAchievements",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "课题成果申报",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/innovation/conclusionProject/conclusionProject",
+            "style" :
+            {
+                "navigationBarTitleText": "课题结题申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/courseSelection/courseSelection",
+            "style" :
+            {
+                "navigationBarTitleText": "选课-任选",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/courseSelectionRestriction/courseSelectionRestriction",
+            "style" :
+            {
+                "navigationBarTitleText": "选课-限选",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/graduationTopicSelection/graduationTopicSelection",
+            "style" :
+            {
+                "navigationBarTitleText": "毕业选题",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/levelExamination/levelExamination",
+            "style" :
+            {
+                "navigationBarTitleText": "考级报名",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/examination/examination",
+            "style" :
+            {
+                "navigationBarTitleText": "考试报名",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/staminaTest/staminaTest",
+            "style" :
+            {
+                "navigationBarTitleText": "体测报名",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/courseRegistration/dropOut/dropOut",
+            "style" :
+            {
+                "navigationBarTitleText": "退课申请",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/evaluate/teacher/teacher",
+            "style" :
+            {
+                "navigationBarTitleText": "教师评价",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/evaluate/course/course",
+            "style" :
+            {
+                "navigationBarTitleText": "课程评价",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/evaluate/classroom/classroom",
+            "style" :
+            {
+                "navigationBarTitleText": "课堂评价",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/evaluate/questionnaireInvestigation/questionnaireInvestigation",
+            "style" :
+            {
+                "navigationBarTitleText": "问卷调查",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/selection/teacher/teacher",
+            "style" :
+            {
+                "navigationBarTitleText": "优秀教师评选",
+                "enablePullDownRefresh": false
+            }
+
+        }
+        ,{
+            "path" : "pages/menu/studyPlan/detail/detail/detail",
+            "style" :
+            {
+                "navigationBarTitleText": "查看培养计划",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/menu/classTasks/detail/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看上课任务",
                 "enablePullDownRefresh": false
             }
             
         }
         ,{
-            "path" : "pages/menu/innovation/conclusionProject/conclusionProject",
+            "path" : "pages/menu/classTimetable/schoolClassTimetable/detail/detail",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "查看全校课表",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/levelExaminationScore/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看考级成绩",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/classScore/classScore/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看课程成绩",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/classScore/classPlusScore/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看成绩加分申请",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/examinationArrangement/detail/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看考试安排",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/testScore/detail/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看测验成绩",
                 "enablePullDownRefresh": false
             }
             

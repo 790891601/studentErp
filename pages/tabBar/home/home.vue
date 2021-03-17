@@ -25,15 +25,15 @@
 			</view>
 			<view class="notify-content">
 				<!-- 通知的内容 -->
-				
+
 			</view>
 		</view>
 		<!-- 菜单列表 -->
 		<view class="menu-container">
 			<view class="menu-list">
 				<view class="menu-item" v-for="item in menu" @tap="onNavigateToMixin" :data-url="item.url">
-					<image class="menu-icon" :src="item.icon"></image>
-					<view class="menu-text">{{item.text}}</view>
+					<view class="fa fa-2x menu-icon" :class="[item.icon]"></view>
+					<view class="menu-text">{{item.title}}</view>
 				</view>
 				<view class="menu-item" @tap="onNavigateToMixin" data-url="addCard/addCard">
 					<view class="menu-add"></view>
@@ -47,9 +47,26 @@
 		mapState,
 		mapMutations
 	} from 'vuex';
+	import menuSourceData from '@/common/data/menuSourceData.js'
+
 	export default {
 		computed: {
-			...mapState(['systemInfo'])
+			...mapState(['systemInfo', 'selectedMenu'])
+		},
+		onShow() {
+			let newMenu = []; //菜单扁平化
+			this.menuSourceData.map(menu => {
+				menu.children.map(item => {
+					if(this.selectedMenu.indexOf(item.name) > -1) {
+						newMenu.push(item);
+					}
+				});
+			});
+
+			this.menu = newMenu;
+		},
+		onLoad() {
+			this.loadData();
 		},
 		data() {
 			return {
@@ -67,20 +84,8 @@
 				},{
 					src: '/static/swiper.jpeg'
 				}],
-				menu: [{
-					icon: '/static/60x60.png',
-					text: '学籍卡片',
-					url: 'tabBar/user/user'
-				},{
-					icon: '/static/60x60.png',
-					text: '学籍卡片'
-				},{
-					icon: '/static/60x60.png',
-					text: '学籍卡片'
-				},{
-					icon: '/static/60x60.png',
-					text: '学籍卡片'
-				}]
+				menu: [], //菜单
+				menuSourceData: menuSourceData
 			}
 		},
 		onShareAppMessage() {
@@ -90,6 +95,17 @@
 			}
 		},
 		methods: {
+			async loadData() {
+				//请求首页数据
+				let data = {
+
+				}
+				try {
+					let home = await this.$get('home', data);
+				}catch(err) {
+					console.log(err);
+				}
+			},
 			onSwiperChange(e) {
 				this.swiperCurrent = e.detail.current
 			},
@@ -116,8 +132,9 @@
 	width: 100%;
 }
 .notify-container {
-	margin: 30upx 24upx;
-	box-shadow: #999 0px 2px 6px 0px;
+	margin: 30upx 24upx 50upx;
+	box-shadow: #F5F5F5 0px 2px 6px 0px;
+	border: 1px solid #ececec;
 	border-radius: 18upx;
 	padding: 20upx 30upx;
 	.notify-head-title {
@@ -137,10 +154,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	text-align: center;
 	margin-bottom: 50upx;
 	.menu-icon {
-		width: 60upx;
-		height: 60upx;
 		margin-bottom: 12upx;
 	}
 	.menu-text {

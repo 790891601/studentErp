@@ -1,15 +1,37 @@
 {
-    "uni-app": {
-        "scripts": {
-            "mp-dingtalk": { 
-                "title":"钉钉小程序", 
-                "env": { 
-                    "UNI_PLATFORM": "mp-alipay" 
-                },
-                "define": { 
-                    "MP-DINGTALK": true 
-                }
-            }
+  "uni-app": {
+    "scripts": {
+      "mp-dingtalk": {
+        "title": "钉钉小程序",
+        "env": {
+          "UNI_PLATFORM": "mp-alipay"
+        },
+        "define": {
+          "MP-DINGTALK": true
         }
+      }
     }
+  },
+  "devDependencies": {
+    "mockjs": "^1.1.0"
+  },
+  "name": "studentERP",
+  "description": "- pages/menu  菜单二级页面 \t\t /studentStatus 学籍卡片 \t\t /studyPlan 学习计划 \t\t /classTasks 上课任务 \t\t /preExamination 预审学习计划 \t\t /classTimetable 课表查询 \t\t /classTimetableAll 班级课表 \t\t /levelExaminationScore 考级成绩 \t\t /classScore 课程成绩 \t\t /earlyWarningOfStudentStatus 学籍预警 \t\t /staminaTestScore 体测成绩 \t\t /trainingProgram 培养计划 \t\t /examinationArrangement 考试安排 \t\t /operationLog 操作日志 \t\t /testScore 测验成绩 \t\t /paymentRecord 缴费记录 \t\t /business 业务办理 \t\t\t/applicationForPostponement 缓考申请 \t\t\t/noListening 免听申请 \t\t\t/exemptionCourse 免修申请 \t\t\t/leavingSchool 休退学申请 \t\t\t/selectedTextbooks 选订教材 \t\t\t/classroomBorrowing 教室借用申请 \t\t\t/score 成绩复核申请 \t\t\t/staminaTestDelay 体测缓测申请 \t\t\t/scoreConversion 成绩转换申请 \t\t\t/staminaTestFree 体测免测申请 \t\t\t/studentCardReplace 学生证补办申请 \t\t\t/leave 请假申请 \t\t /innovation 创新项目 \t\t\t/innovationScore 创新学分申请 \t\t\t/extracurricularProjects 课外课题申报 \t\t\t/reimbursement 个人报销申请 \t\t\t/researchAchievements 课题成果申报 \t\t\t/conclusionProject 课题结题申请 \t\t /changesStatus 学籍变动 \t\t\t/infoChange 信息变动申请 \t\t\t/studentStatusChange 学籍变动申请 \t\t /courseRegistration 选课报名 \t\t    /courseSelection 选课-任选 \t\t\t/courseSelectionRestriction 选课-限选 \t\t\t/graduationTopicSelection 毕业选题 \t\t\t/levelExamination 考级报名 \t\t\t/examination 考试报名（待开发） \t\t\t/staminaTest 体测报名 \t\t\t/dropOut 退课申请 \t\t /evaluate 评价信息 \t\t\t/teacher 教师评价 \t\t\t/course  课程评价 \t\t\t/classroom 课堂评价 \t\t\t/questionnaireInvestigation 问卷调查 \t\t/selection 评选信息 \t\t\t/teacher 优秀教师评选\t \t- /components 公共组件 \t\t/my-tab Tab标签页 \t\t/my-infomuation 信息展示容器 \t- common  \t    /mixins 混入通用函数 \t\t/scss 公共引入样式管理 \t\t/data 前端静态数据 \t\tthirdParty.js 第三方请求封装 \t\tconfig.js 网站项目配置以及常量配置 \t\trequest.js 请求库 \t\tuni.css 公共样式 \t\tutils.js 公共函数库",
+  "version": "1.0.0",
+  "main": "main.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/790891601/studentErp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/790891601/studentErp/issues"
+  },
+  "homepage": "https://github.com/790891601/studentErp#readme"
 }

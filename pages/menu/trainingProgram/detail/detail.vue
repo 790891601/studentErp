@@ -1,5 +1,5 @@
 <template>
-	<view class="class-score">
+	<view class="container">
 		<!-- 培养计划查询结果 -->
 		<my-infomuation>
 			<view class="p">计划编号：</view>
@@ -30,8 +30,8 @@
 
 <style lang="scss" scoped>
 @import "../../../../common/scss/button.scss";
-.class-score {
-	margin-top: 160upx;
+.container {
+	padding-top: 30upx;
 }
 .selector {
 	width: 70%;

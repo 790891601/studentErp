@@ -13,12 +13,26 @@
 	export default {
 		data() {
 			return {
+				options: {},
 				headRow: ['','一', '二', '三', '四', '五', '六', '日'],
 				column: ['','01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14']
 			}
 		},
+		onLoad(options) {
+			this.options = options;
+			this.loadData();
+		},
 		methods: {
-
+			async loadData() {
+				let data = {
+					
+				}
+				try {
+					let res = await this.$get('', data);
+				}catch(e) {
+					console.log(e);
+				}
+			}
 		}
 	}
 </script>

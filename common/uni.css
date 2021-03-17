@@ -14,6 +14,19 @@
 }
 /* #endif */
 
+.field {
+	color: #999;
+	font-size: 32upx;
+}
+.flex-none {
+	flex: none;
+}
+.container {
+	background-color: #f9f9fb; /* 容器 */
+	min-height: 100vh;
+	overflow: scroll;
+	box-sizing: border-box;
+}
 /* 展示表格的数据显示 */
 .p {
 	margin-bottom: 26upx;
@@ -27,7 +40,7 @@ image {
 	width: 100%;
 }
 view{
-	font-size:28rpx;
+	font-size:32upx;
 	color: #333333;
 }
 progress, checkbox-group{

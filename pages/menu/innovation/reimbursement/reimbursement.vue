@@ -1,20 +1,20 @@
 <template>
-	<view>
+	<view class="container">
 		<!-- 个人报销申请 -->
 		<my-tab :head="head" :active.sync="active" :column="2">
 			<my-tab-pane :active="active" :index="0">
 				<!-- 增加申请 -->
 				<my-infomuation>
 					<view class="p">
-						<text>课题编号：</text>
+						<text class="field">课题编号：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="p">
-						<text>课题名称：</text>
+						<text class="field">课题名称：</text>
 						<my-picker class="selector" :ranges="moduleRanges" :defaultKey="2" :defaultValue.sync="defaultValue"></my-picker>
 					</view>
 					<view class="buttons">
-						<view class="button-view" @tap="onAddSubmit">提交</view>
+						<view class="button-view button-max" @tap="onAddSubmit">提交</view>
 					</view>
 				</my-infomuation>
 			</my-tab-pane>
@@ -61,6 +61,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../../../../common/scss/button.scss";
 .selector {
 	width: 60%;
 }
@@ -73,17 +74,6 @@
 	display: flex;
 	justify-content: space-between;
 	padding-bottom: 70upx;
-}
-.button-view {
-	background-color: #F48D3A;
-	width: 388upx;
-	height: 92upx;
-	line-height: 92upx;
-	text-align: center;
-	border-radius: 15upx;
-	font-size: 36upx;
-	opacity: .8;
-	margin: auto;
 }
 .hr {
 	margin-top: 120upx;
