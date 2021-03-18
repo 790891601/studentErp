@@ -3,7 +3,7 @@
   - pages/menu  菜单二级页面
 		 /studentStatus 学籍卡片
 		 /studyPlan 学习计划
-		 /classTasks 上课任务
+		 /classTasks 上课任务          （3-18 上拉加载分页模版)
 		 /preExamination 预审学习计划
 		 /classTimetable 课表查询
 		 /classTimetableAll 班级课表

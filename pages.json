@@ -666,6 +666,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/menu/business/applicationForPostponement/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看缓考记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/business/noListening/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "查看免听记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/menu/business/exemptionCourse/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"pageOrientation": "portrait",

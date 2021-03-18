@@ -107,9 +107,6 @@
 </script>
 
 <style lang="scss" scoped>
-.container {
-	padding-top: 30upx;
-}
 /* 未登录外层 */
 .userinfo-wrap {
 	margin-left: 20upx;
@@ -133,7 +130,7 @@
 	}
 }
 .userinfo {
-	padding: 0 30upx 30upx;
+	padding: 0 0 30upx;
 }
 .list {
 	background-color: #fff;
@@ -148,7 +145,7 @@
 }
 /* 未登录 */
 .empty-login {
-	padding: 24upx;
+	padding: 50upx 24upx 30upx;
 	background-color: #fff;
 	.empty-login-head {
 		display: flex;
@@ -162,11 +159,11 @@
 }
 /* 已登陆 */
 .login {
+	padding: 50upx 24upx 30upx;
 	background-color: #fff;
 	box-shadow: #F5F5F5 0px 2px 6px 0px;
 	border-radius: 15upx;
 	display: flex;
-	padding: 24upx;
 	.avatar-image {
 		width: 120upx;
 		height: 120upx;

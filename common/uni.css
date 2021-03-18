@@ -39,6 +39,9 @@ image {
 	vertical-align: middle;
 	width: 100%;
 }
+page {
+	height: 100%;
+}
 view{
 	font-size:32upx;
 	color: #333333;

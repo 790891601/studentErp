@@ -32,19 +32,21 @@
 			</my-tab-pane>
 			<!-- 申请记录 -->
 			<my-tab-pane :active="active" :index="1">
-				<my-infomuation>
-					<view class="p">开课学期：</view>
-					<view class="p">学号：</view>
-					<view class="p">姓名：</view>
-					<view class="p">课程名称：</view>
-					<view class="p">总学时：</view>
-					<view class="p">开课院系：</view>
-					<view class="p">认定教师：</view>
-					<view class="p">申请时间：</view>
-					<view class="p">申请原因：</view>
-					<view class="p">审核状态：</view>
-					<view class="p">审核结果：</view>
-				</my-infomuation>
+				<view v-for="(item,index) in list" :key="index" @tap="onNavigateToMixin" data-url="menu/business/applicationForPostponement/detail/detail" :data-id="item.id">
+					<my-infomuation>
+						<view class="p">开课学期：{{item.xueqi}}</view>
+						<!-- <view class="p">学号：{{item.xueqi}}</view> -->
+						<view class="p">姓名：{{item.xueqi}}</view>
+						<view class="p">课程名称：{{item.xueqi}}</view>
+						<!-- <view class="p">总学时：{{item.xueqi}}</view> -->
+						<!-- <view class="p">开课院系：{{item.xueqi}}</view> -->
+						<!-- <view class="p">认定教师：{{item.xueqi}}</view> -->
+						<view class="p">申请时间：{{item.xueqi}}</view>
+						<!-- <view class="p">申请原因：{{item.xueqi}}</view> -->
+						<view class="p">审核状态：{{item.xueqi}}</view>
+						<!-- <view class="p">审核结果：{{item.xueqi}}</view> -->
+					</my-infomuation>
+				</view>
 			</my-tab-pane>
 		</my-tab>
 	</view>
@@ -54,6 +56,7 @@
 	export default {
 		data() {
 			return {
+				options: {},
 				head: [{
 					title: '缓考申请'
 				},{
@@ -61,6 +64,7 @@
 				}],
 				active: 0,
 				year: [], //学年学期
+				list: [], //缓考记录
 				form: {
 					techer: '', //认定教师
 					className: '', //课程名称
@@ -68,7 +72,39 @@
 				}
 			}
 		},
+		onLoad(options) {
+			this.options = options;
+			this.loadData();
+		},
 		methods: {
+			async loadData() {
+				let random = this.$Mock.Random;
+				this.year = this.mock({
+					'code': 0,
+					'msg': '成功',
+					'list|1-10': [{
+						'id|+1': 1,
+						'title': random.date()
+					}]
+				}).list;
+				this.list = this.mock({
+					'code': 0,
+					'msg': '成功',
+					'list|1-10': [{
+						'id|+1': 1,
+						'xueqi': random.date()
+					}]
+				}).list;
+
+				// let data = {
+
+				// }
+				// try {
+				// 	let res = await this.$get('', data);
+				// }catch(e) {
+				// 	console.log(e)
+				// }
+			},
 			onChange(e, name) {
 				this.$set(this.form, name, this[name][e]);
 			},

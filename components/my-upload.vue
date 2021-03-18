@@ -36,9 +36,7 @@
 					success:(res)=> {
 						const tempFilePaths = res.tempFiles;
 						console.log(tempFilePaths)
-						this.$request.customUploadFiles(tempFilePaths.length, tempFilePaths, (res) => {
-							console.log(res)
-						})
+						this.$request.customUploadFile('upload/image', tempFilePaths[0].path, 'iFile')
 					},
 					fail(err) {
 						console.log(err)

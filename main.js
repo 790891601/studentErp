@@ -13,6 +13,9 @@ import myPicker from '@/components/my-picker.vue'
 import myInput from '@/components/my-input.vue'
 import myTextarea from '@/components/my-textarea.vue'
 import myUpload from '@/components/my-upload.vue'
+import uniLoadMore from '@/uni_modules/uni-load-more/components/uni-load-more/uni-load-more.vue'
+import zPaging from '@/uni_modules/z-paging/components/z-paging/z-paging.vue'
+import emptyView from '@/components/empty-view.vue'
 import Mock from 'mockjs'
 
 if(process.env.NODE_ENV === 'development') {
@@ -27,6 +30,9 @@ if(process.env.NODE_ENV === 'development') {
 
 Vue.config.productionTip = false
 
+Vue.component('empty-view', emptyView);
+Vue.component('z-paging', zPaging);
+Vue.component('uni-load-more', uniLoadMore);
 Vue.component('my-tab', myTab);
 Vue.component('my-tab-pane', myTabPane);
 Vue.component('my-infomuation', myInfoMuation);
@@ -38,7 +44,8 @@ Vue.component('my-upload', myUpload);
 Vue.prototype.$thirdParty = thirdParty;
 Vue.prototype.$config = config;
 Vue.prototype.$utils = utils;
-Vue.prototype.$request = request.request;
+
+Vue.prototype.$request = request;
 Vue.prototype.$get = request.get;
 Vue.prototype.$post = request.post;
 
